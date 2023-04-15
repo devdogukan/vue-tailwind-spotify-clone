@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html, body, #app {
+        @apply h-full bg-backdrop text-white antialiased
+    }
+
+    #app {
+        @apply flex flex-col
+    }
+
+    .wrapper {
+        height: calc(100% - theme(spacing.24));
+        @apply flex
+    }
+}
