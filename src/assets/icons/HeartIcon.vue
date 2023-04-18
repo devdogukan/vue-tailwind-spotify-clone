@@ -7,7 +7,7 @@
 <script>
 
 export default {
-    name: 'PlusIcon',
+    name: 'HeartIcon',
     
     props: {
         size: {type: String}
