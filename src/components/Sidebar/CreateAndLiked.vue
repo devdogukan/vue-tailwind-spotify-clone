@@ -27,7 +27,7 @@ export default {
         return {
             links: [
                 { icon: 'plus', to: '#', name: 'Create Playlist', size: '12', bg: 'bg-white', color: 'fill-black' },
-                { icon: 'heart', to: '#', name: 'Liked Songs', size: '12', bg: 'bg-gradient-to-br from-indigo-500 to-blue-300', color: 'fill-white' },
+                { icon: 'heartFilled', to: '#', name: 'Liked Songs', size: '12', bg: 'bg-gradient-to-br from-indigo-500 to-blue-300', color: 'fill-white' },
             ]
         }
     }
