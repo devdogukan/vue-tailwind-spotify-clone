@@ -12,6 +12,7 @@ import NextIcon from './assets/icons/NextIcon.vue';
 import PrevIcon from './assets/icons/PrevIcon.vue';
 import DownDirIcon from './assets/icons/DownDirIcon.vue';
 import ExternalIcon from './assets/icons/ExternalIcon.vue';
+import PlayIcon from './assets/icons/PlayIcon.vue';
 
 export default {
     name: 'Icons',
@@ -25,7 +26,8 @@ export default {
         next: NextIcon,
         prev: PrevIcon,
         downDir: DownDirIcon,
-        external: ExternalIcon
+        external: ExternalIcon,
+        play: PlayIcon
     },
 
     props: {
