@@ -11,8 +11,7 @@
   "dependencies": {
     "@headlessui/vue": "^1.7.13",
     "vue": "^3.2.47",
-    "vue-router": "4",
-    "vue3-slider": "^1.8.0"
+    "vue-router": "4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",

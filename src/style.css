@@ -16,3 +16,24 @@
         @apply flex
     }
 }
+
+@layer components {
+    /* * Music Slider */
+    .slider {
+        @apply
+            absolute
+            appearance-none
+            w-full h-1
+            bg-transparent outline-none
+    }
+
+    .slider::-webkit-slider-thumb {
+        @apply
+            appearance-none
+            w-1.5 h-1.5
+            hover:scale-[2] hover:bg-[#FFFFFF]
+            transition-all duration-150
+            rounded-full
+    }
+    /* * Music Slider */
+}

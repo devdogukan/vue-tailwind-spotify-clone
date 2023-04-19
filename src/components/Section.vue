@@ -15,7 +15,7 @@
                         :class="imageType(item.type)">
                     <button
                         class="w-10 h-10 rounded-full bg-[#1ed760] absolute hidden bottom-1 right-1 items-center justify-center hover:scale-110 group-hover:flex group-focus:flex">
-                        <Icons size="20" name="play" />
+                        <Icons class="text-black" size="20" name="play" />
                     </button>
                 </div>
                 <h6 class="overflow-hidden overflow-ellipsis whitespace-nowrap text-base font-semibold">

@@ -11,7 +11,8 @@
                 <button class="w-8 h-8 flex items-center justify-center text-white text-opacity-60 hover:text-opacity-100">
                     <Icons size="16" name="playerPrev" />
                 </button>
-                <button class="w-8 h-8 flex items-center justify-center bg-white text-black rounded-full hover:scale-[1.06]">
+                <button
+                    class="w-8 h-8 flex items-center justify-center bg-white text-black rounded-full hover:scale-[1.06]">
                     <Icons size="16" name="play" />
                 </button>
                 <button class="w-8 h-8 flex items-center justify-center text-white text-opacity-60 hover:text-opacity-100">
@@ -21,8 +22,8 @@
                     <Icons size="16" name="repeat" />
                 </button>
             </div>
-            <div class="w-full pt-3 flex justify-center items-center">
-                <Slider v-model="value" color="#1DB954" track-color="#535353" circleOffset="360" />
+            <div class="items-center w-full pt-3">
+                <Slider />
             </div>
         </div>
         <div class="min-w-[11.25rem] w-[30%] flex justify-end">
@@ -33,19 +34,26 @@
 
 <script>
 import Icons from '../../Icons.vue';
-import Slider from "vue3-slider";
+import Slider from './Slider.vue';
 
 export default {
     name: "Player",
 
-    components: { 
+    components: {
         Icons,
-        Slider,
+        Slider
     },
 
     data() {
         return {
-            value: null,
+            value: 0,
+        }
+    },
+
+    watch: {
+        value(newValue) {
+            const progressSlider = document.querySelector('#progress-slider');
+            progressSlider.style.width = newValue + '%'
         }
     }
 }

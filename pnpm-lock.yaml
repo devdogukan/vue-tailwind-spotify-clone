@@ -10,9 +10,6 @@ dependencies:
   vue-router:
     specifier: '4'
     version: 4.1.6(vue@3.2.47)
-  vue3-slider:
-    specifier: ^1.8.0
-    version: 1.8.0(vue@3.2.47)
 
 devDependencies:
   '@vitejs/plugin-vue':
@@ -1060,15 +1057,6 @@ packages:
       vue: ^3.2.0
     dependencies:
       '@vue/devtools-api': 6.5.0
-      vue: 3.2.47
-    dev: false
-
-  /vue3-slider@1.8.0(vue@3.2.47):
-    resolution: {integrity: sha512-JzYEEnDiCPHrmpQaHCRaMNg7yZtydY+cbzb+uissRzN3p5+pV5WtIpfYl7nyYZ2hRJzJineZJCq8WvPdRXWGMQ==}
-    engines: {node: '>=10'}
-    peerDependencies:
-      vue: ^3.0.0
-    dependencies:
       vue: 3.2.47
     dev: false
 
