@@ -4,7 +4,7 @@
         <span v-if="route == 'search'">
             Selam
         </span>
-        <Auth />
+        <Auth class="z-10"/>
     </nav>
 </template>
 

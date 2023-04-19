@@ -1,16 +1,12 @@
 <template>
     <div>
-        <Slider />
+        Seacrh
     </div>
 </template>
 
 <script>
-import Slider from '../components/BottomBar/Slider.vue';
 
 export default {
     name: "Search",
-    components: {
-        Slider
-    }
 }
 </script>

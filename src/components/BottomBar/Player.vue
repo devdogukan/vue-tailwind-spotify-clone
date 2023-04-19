@@ -8,22 +8,24 @@
                 <button class="w-8 h-8 flex items-center justify-center text-white text-opacity-60 hover:text-opacity-100">
                     <Icons size="16" name="shuffle" />
                 </button>
-                <button class="w-8 h-8 flex items-center justify-center text-white text-opacity-60 hover:text-opacity-100">
+                <button id="playerPrev" class="w-8 h-8 flex items-center justify-center text-white text-opacity-60 hover:text-opacity-100">
                     <Icons size="16" name="playerPrev" />
                 </button>
                 <button
+                    @click="isPlayed = !isPlayed"
+                    id="masterPlay"
                     class="w-8 h-8 flex items-center justify-center bg-white text-black rounded-full hover:scale-[1.06]">
-                    <Icons size="16" name="play" />
+                    <Icons size="16" :name="isPlayed ? 'pause' : 'play'" />
                 </button>
-                <button class="w-8 h-8 flex items-center justify-center text-white text-opacity-60 hover:text-opacity-100">
+                <button id="playerNext" class="w-8 h-8 flex items-center justify-center text-white text-opacity-60 hover:text-opacity-100">
                     <Icons size="16" name="playerNext" />
                 </button>
                 <button class="w-8 h-8 flex items-center justify-center text-white text-opacity-60 hover:text-opacity-100">
                     <Icons size="16" name="repeat" />
                 </button>
             </div>
-            <div class="items-center w-full pt-3">
-                <Slider />
+            <div class="w-full">
+                <Slider @pause="isPlayed = false"/>
             </div>
         </div>
         <div class="min-w-[11.25rem] w-[30%] flex justify-end">
@@ -41,19 +43,12 @@ export default {
 
     components: {
         Icons,
-        Slider
+        Slider,
     },
 
     data() {
         return {
-            value: 0,
-        }
-    },
-
-    watch: {
-        value(newValue) {
-            const progressSlider = document.querySelector('#progress-slider');
-            progressSlider.style.width = newValue + '%'
+            isPlayed: false
         }
     }
 }
