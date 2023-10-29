@@ -1,16 +1,44 @@
 <template>
-    <div class="flex items-center gap-5 w-full">
-        <div class="text-sm opacity-80">{{ startTime }}</div>
-        <div class="relative bg-[#535353] w-full h-1 rounded group">
-            <div :style="{ 'width': `${model}%` }" class="absolute bg-gray-200 group-hover:bg-[#1DB954] h-1 rounded-l-md">
-            </div>
-            <input v-model="model" min="0" max="100" type="range" class="slider">
-        </div>
-        <div class="text-sm opacity-80">{{ endTime === 'NaN:NaN' ? '00:00' : endTime }}</div>
+  <div class="flex items-center gap-5">
+    <div v-if="show" class="text-sm opacity-80">00:00</div>
+    <div class="relative bg-[#535353] w-full h-1 rounded group">
+      <div
+        :style="{ width: `${model}%` }"
+        class="absolute bg-gray-200 group-hover:bg-[#1DB954] h-1 rounded-l-md"
+      ></div>
+      <input v-model="model" min="0" max="100" type="range" class="slider" />
     </div>
+    <div v-if="show" class="text-sm opacity-80">04:30</div>
+  </div>
 </template>
 
-<script setup>
+<script>
+export default {
+  name: "Slider",
+  props: {
+    show: { type: Boolean, default: false },
+    value: { type: Number },
+  },
+
+  data() {
+    return {
+      model: 0,
+    };
+  },
+
+  watch: {
+    model() {
+        this.$emit("onChange", Number.parseInt(this.model));
+    }
+  },
+
+  mounted() {
+    this.model = this.value
+  }
+};
+</script>
+
+<!-- <script setup>
 import { ref, reactive } from 'vue';
 
 const emit = defineEmits(['pause']);
@@ -105,4 +133,4 @@ const reset = () => {
     emit('pause');
 };
 
-</script>
+</script> -->
